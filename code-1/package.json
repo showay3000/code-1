@@ -2,9 +2,12 @@
   "name": "code-1",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://showay3000.github.io/code-1/",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
