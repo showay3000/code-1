@@ -7,5 +7,14 @@ export default defineConfig({
   plugins: [react()],
   server: {
     historyApiFallback: true
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
+      }
+    }
   }
 })
